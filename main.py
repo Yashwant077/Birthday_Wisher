@@ -14,7 +14,7 @@ today_tuple = (today.month, today.day)
 
 if today_tuple in birthday_dict:
     birthday_person = birthday_dict[today_tuple]
-    file_path = f"letter_templates/letter_{random.randint(1,3)}.txt"
+    file_path = f"letter_{random.randint(1,3)}.txt"
     with open(file_path) as letter_file:
         contents = letter_file.read()
         contents = contents.replace("[NAME]", birthday_person['name'])
